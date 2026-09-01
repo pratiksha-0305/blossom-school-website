@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='image/school logo.jpeg') }}">
+
+    <title>Admin Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f8ff;
+            margin: 0;
+        }
+
+        header {
+            background: #0b4da2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dashboard {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .box {
+            padding: 25px;
+            margin: 20px 0;
+            background: #eaf4ff;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #0b4da2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #06356f;
+        }
+
+        .delete {
+            background: #d9534f;
+        }
+
+        .delete:hover {
+            background: #a52a2a;
+        }
+
+        .logout {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏫 Blossom English School</h1>
+    <p>Admin Dashboard</p>
+</header>
+
+<div class="dashboard">
+
+    <h2>Welcome, Admin!</h2>
+
+    <!-- ADD PHOTO -->
+
+    <div class="box">
+
+        <h3>📸 Add Event Photos</h3>
+
+        <p>Upload photos from school events.</p>
+
+        <a href="/add-photo" class="btn">
+            Add Event Photo
+        </a>
+
+    </div>
+
+
+    <!-- ADD VIDEO -->
+
+    <div class="box">
+
+        <h3>🎥 Add Event Video</h3>
+
+        <p>Upload videos from school events.</p>
+
+        <a href="/add-video" class="btn">
+            Add Event Video
+        </a>
+
+    </div>
+
+
+    <!-- MANAGE PHOTOS -->
+
+    <div class="box">
+
+        <h3>🗑️ Manage Photos</h3>
+
+        <p>View and delete uploaded photos.</p>
+
+        <a href="/manage-photos" class="btn">
+            Manage Photos
+        </a>
+
+    </div>
+
+
+    <!-- MANAGE VIDEOS -->
+
+    <div class="box">
+
+        <h3>🗑️ Manage Videos</h3>
+
+        <p>View and delete uploaded videos.</p>
+
+        <a href="/manage-videos" class="btn">
+            Manage Videos
+        </a>
+
+    </div>
+
+
+    <!-- LOGOUT -->
+
+    <a href="/logout" class="btn logout">
+        Logout
+    </a>
+
+</div>
+<div class="box">
+
+    <h3>📋 Admission Applications</h3>
+
+    <p>
+        View student admission inquiries and applications.
+    </p>
+
+    <a href="/view-students" class="btn">
+        View Applications
+    </a>
+
+</div>
+
+</body>
+</html>

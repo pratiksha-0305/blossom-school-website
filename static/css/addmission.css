@@ -1,0 +1,158 @@
+/* Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f8ff;
+    color: #333;
+}
+
+
+/* Sticky Header */
+.school-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(90deg, #0066cc, #00aaff);
+    padding: 15px;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+
+/* School Logo */
+.school-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+
+/* Header Title */
+.school-header h1 {
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* Form Heading */
+h2 {
+    text-align: center;
+    color: #0066cc;
+    margin-top: 30px;
+}
+
+
+/* Form Design */
+form {
+    width: 450px;
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #004080;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+/* Input Fields */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+
+/* Focus Effect */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 5px #66b3ff;
+}
+
+
+/* Textarea */
+textarea {
+    resize: vertical;
+}
+
+
+/* Buttons */
+button {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #008000;
+}
+
+button[type="submit"]:hover {
+    background-color: #006600;
+}
+
+
+/* Reset Button */
+button[type="reset"] {
+    background-color: #d9534f;
+}
+
+button[type="reset"]:hover {
+    background-color: #a52a2a;
+}
+
+
+/* Mobile Responsive */
+@media(max-width:600px) {
+
+    .school-header {
+        flex-direction: column;
+       
+        
+    }
+
+    .school-header h1 {
+        font-size: 22px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

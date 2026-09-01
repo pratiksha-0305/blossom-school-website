@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon"
+          href="{{ url_for('static', filename='image/school logo.jpeg') }}">
+
+    <title>Inquiry Form</title>
+
+    <meta name="description"
+          content="Blossom English School Mayani provides quality education with modern facilities and values.">
+
+    <meta name="keywords"
+          content="Blossom English School, Mayani, School, Education">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/addmission.css') }}">
+
+</head>
+
+<body>
+
+<header class="school-header">
+
+    <img src="{{ url_for('static', filename='image/school logo.jpeg') }}"
+         alt="School Logo">
+
+    <h1>Blossom English School Mayani</h1>
+
+</header>
+
+
+<h2>Contact Form</h2>
+
+
+<form method="POST" action="/admission">
+
+    <label>Student Name</label>
+
+    <input type="text"
+           name="student_name"
+           placeholder="Enter student name"
+           required>
+
+    <br><br>
+
+
+    <label>Date of Birth</label>
+
+    <input type="date"
+           name="dob"
+           required>
+
+    <br><br>
+
+
+    <label>Gender</label>
+
+    <select name="gender" required>
+
+        <option value="">Select Gender</option>
+
+        <option value="Male">Male</option>
+
+        <option value="Female">Female</option>
+
+    </select>
+
+    <br><br>
+
+
+    <label>Select Class</label>
+
+    <select name="class_apply" required>
+
+        <option value="">Select Class</option>
+
+        <option value="Nursery">Nursery</option>
+        <option value="LKG">LKG</option>
+        <option value="UKG">UKG</option>
+        <option value="Class 1">Class 1</option>
+        <option value="Class 2">Class 2</option>
+        <option value="Class 3">Class 3</option>
+        <option value="Class 4">Class 4</option>
+        <option value="Class 5">Class 5</option>
+        <option value="Class 6">Class 6</option>
+        <option value="Class 7">Class 7</option>
+        <option value="Class 8">Class 8</option>
+        <option value="Class 9">Class 9</option>
+        <option value="Class 10">Class 10</option>
+
+    </select>
+
+    <br><br>
+
+
+    <label>Father's Name</label>
+
+    <input type="text"
+           name="father_name"
+           placeholder="Enter father's name"
+           required>
+
+    <br><br>
+
+
+    <label>Mother's Name</label>
+
+    <input type="text"
+           name="mother_name"
+           placeholder="Enter mother's name"
+           required>
+
+    <br><br>
+
+
+    <label>Mobile Number</label>
+
+    <input type="tel"
+           name="phone"
+           placeholder="Enter mobile number"
+           required>
+
+    <br><br>
+
+
+    <label>Email</label>
+
+    <input type="email"
+           name="email"
+           placeholder="Enter email">
+
+    <br><br>
+
+
+    <label>Address</label>
+
+    <textarea name="address"
+              rows="3"
+              placeholder="Enter address"></textarea>
+
+    <br><br>
+
+
+    <button type="submit">Submit</button>
+
+    <br><br>
+
+    <button type="reset">Reset</button>
+
+</form>
+
+</body>
+
+</html>

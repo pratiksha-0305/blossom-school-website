@@ -1,0 +1,268 @@
+/* General Styling */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fbff, #e8f5ff);
+    color: #333;
+    padding-bottom: 40px;
+}
+
+
+/* Main Heading */
+.school-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    background: linear-gradient(90deg, #0066ff, #00bfff);
+    padding: 15px 20px;
+
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+
+/* Logo */
+.school-header img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+    background: white;
+
+    border-radius: 50%;
+    padding: 5px;
+
+    border: 3px solid white;
+}
+
+
+/* School Name */
+.school-header h1 {
+    margin: 0;
+    font-size: 38px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+/* Section Design */
+section {
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+/* Section Headings */
+h2 {
+    text-align: center;
+    color: #0066cc;
+    font-size: 30px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #00bfff;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+
+/* Center headings */
+section h2 {
+    display: block;
+}
+
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+
+/* Images */
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    border: 4px solid #e6f4ff;
+}
+
+
+/* Image Hover Effect */
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: #008cff;
+    box-shadow: 0 10px 25px rgba(0,140,255,0.4);
+}
+
+
+/* Video Gallery */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+
+/* Videos */
+video {
+    width: 100%;
+    border-radius: 18px;
+    background: black;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+/* Single videos */
+section > video {
+    width: 70%;
+    display: block;
+    margin: 25px auto;
+}
+
+
+/* Hover effect for videos */
+video:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
+
+/* Mobile Responsive */
+@media(max-width:600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .gallery img {
+        height: 200px;
+    }
+
+    section > video {
+        width: 100%;
+    }
+}
+/* Image Lightbox */
+
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 30px white;
+}
+
+
+/* Close Button */
+#close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+
+/* Next Previous Buttons */
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #008cff;
+    color: white;
+    border: none;
+    font-size: 35px;
+    padding: 10px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#prev {
+    left: 40px;
+}
+
+#next {
+    right: 40px;
+}
+
+
+#prev:hover,
+#next:hover {
+    background: #00bfff;
+}
+
+
+
+@media(max-width:600px){
+
+    #lightbox img {
+        max-width: 95%;
+    }
+
+    #prev {
+        left: 10px;
+    }
+
+    #next {
+        right: 10px;
+    }
+}
+/* mobile responsive*/
+@media (max-width:600px) {
+    .school-header img {
+        width: 60px;
+        height: 60px;
+    }
+}
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    background: black;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}

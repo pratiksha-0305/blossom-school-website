@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admission Applications</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background: #f2f8ff;
+            margin: 0;
+        }
+
+        header {
+            background: #0b4da2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 95%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #0b4da2;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f5f9ff;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #0b4da2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🏫 Blossom English School</h1>
+
+    <p>Admission Applications</p>
+
+</header>
+
+
+<div class="container">
+
+    <a href="/dashboard" class="back">
+        ← Back to Dashboard
+    </a>
+
+    <h2>📋 Student Applications</h2>
+
+
+    {% if applications %}
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Class</th>
+                <th>Father's Name</th>
+                <th>Mother's Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Submitted</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            {% for application in applications %}
+
+            <tr>
+
+                <td>{{ application.id }}</td>
+
+                <td>{{ application.student_name }}</td>
+
+                <td>{{ application.dob }}</td>
+
+                <td>{{ application.gender }}</td>
+
+                <td>{{ application.class_apply }}</td>
+
+                <td>{{ application.father_name }}</td>
+
+                <td>{{ application.mother_name }}</td>
+
+                <td>{{ application.phone }}</td>
+
+                <td>{{ application.email }}</td>
+
+                <td>{{ application.address }}</td>
+
+                <td>{{ application.created_at }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+    <p>No admission applications found.</p>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

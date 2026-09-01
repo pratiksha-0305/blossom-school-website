@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='image/school logo.jpeg') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>School Gallery</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/gallery.css') }}">
+
+</head>
+
+<body>
+
+<header class="school-header">
+
+
+<img src="{{ url_for('static', filename='image/school logo.jpeg') }}"
+     alt="School Logo">
+
+<h1>Blossom English School Gallery</h1>
+
+
+</header>
+
+<!-- Yoga -->
+
+<section id="yoga">
+
+
+<h2>🧘 Yoga Day</h2>
+
+<div class="gallery">
+
+    <img src="{{ url_for('static', filename='image/yoga.jpg') }}"
+         alt="Yoga Day">
+
+    <img src="{{ url_for('static', filename='image/yoga2.jpg') }}"
+         alt="Yoga Activity">
+
+    <img src="{{ url_for('static', filename='image/yoga3.jpeg') }}"
+         alt="Yoga Day">
+
+</div>
+
+
+</section>
+
+<!-- Activities -->
+
+<section id="chess">
+
+<h2>Activity</h2>
+
+<div class="gallery">
+
+    <img src="{{ url_for('static', filename='image/chess.jpg') }}"
+         alt="Chess Activity">
+
+    <img src="{{ url_for('static', filename='image/tree.jpeg') }}"
+         alt="Tree Plantation">
+
+    <img src="{{ url_for('static', filename='image/tree1.jpeg') }}"
+         alt="Tree Plantation">
+
+</div>
+
+
+</section>
+
+<!-- Independence Day / Speeches -->
+
+<section id="independence-day">
+
+
+<h2>Speeches</h2>
+
+<div class="gallery">
+
+    <img src="{{ url_for('static', filename='image/15_aug.jpeg') }}"
+         alt="Independence Day">
+
+    <img src="{{ url_for('static', filename='image/speech.jpg') }}"
+         alt="Speech">
+
+    <img src="{{ url_for('static', filename='image/speech2.jpg') }}"
+         alt="Speech">
+
+</div>
+
+
+<video controls>
+
+    <source src="{{ url_for('static', filename='video/parade.mp4') }}"
+            type="video/mp4">
+
+    Your browser does not support video playback.
+
+</video>
+
+
+</section>
+
+<!-- Shiv Jayanti -->
+
+<section id="shivjayanti">
+
+<h2>Celebrating Shiv Jayanti</h2>
+
+<div class="gallery">
+
+    <img src="{{ url_for('static', filename='image/jot.jpg') }}"
+         alt="Shiv Jayanti">
+
+    <img src="{{ url_for('static', filename='image/shiv_jot.jpg') }}"
+         alt="Shiv Jyoti">
+
+    <img src="{{ url_for('static', filename='image/shiv_flage.jpg') }}"
+         alt="Shiv Jayanti Flag">
+
+    <img src="{{ url_for('static', filename='image/chh. speecch.jpg') }}"
+         alt="Speech">
+
+</div>
+
+
+</section>
+
+<!-- Bappa -->
+
+<section id="bappa">
+
+
+<h2>BESM Bappa</h2>
+
+<div class="gallery">
+
+    <img src="{{ url_for('static', filename='image/bappa.jpg') }}"
+         alt="Bappa Celebration">
+
+</div>
+<!-- DATABASE PHOTOS -->
+
+<section id="uploaded-photos">
+
+    <h2>📸 Latest School Events</h2>
+
+    <div class="gallery">
+
+        {% for photo in photos %}
+
+        <div class="photo-card">
+
+            <img src="{{ url_for('static', filename='image/' + photo.image_name) }}"
+                 alt="{{ photo.event_name }}">
+
+            <h3>{{ photo.event_name }}</h3>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<video controls>
+
+    <source src="{{ url_for('static', filename='video/bappa.mp4') }}"
+            type="video/mp4">
+
+    Your browser does not support video playback.
+
+</video>
+
+
+</section>
+
+<!-- School Videos -->
+
+<section id="videos">
+
+<h2>🎥 School Videos</h2>
+
+<div class="video-gallery">
+
+    <video controls>
+
+        <source src="{{ url_for('static', filename='video/schoolvideo.mp4') }}"
+                type="video/mp4">
+
+        Your browser does not support video playback.
+
+    </video>
+
+
+    <video controls>
+
+        <source src="{{ url_for('static', filename='video/gathering_video.mp4') }}"
+                type="video/mp4">
+
+        Your browser does not support video playback.
+
+    </video>
+
+
+    <video controls>
+
+        <source src="{{ url_for('static', filename='video/add_video.mp4') }}"
+                type="video/mp4">
+
+        Your browser does not support video playback.
+
+    </video>
+
+
+    <video controls>
+
+        <source src="{{ url_for('static', filename='video/parade.mp4') }}"
+                type="video/mp4">
+
+        Your browser does not support video playback.
+
+    </video>
+
+</div>
+</section>
+<!-- DATABASE VIDEOS -->
+
+<section id="uploaded-videos">
+
+    <h2>🎥 Latest School Videos</h2>
+
+    <div class="video-gallery">
+
+        {% for video in videos %}
+
+        <div class="video-card">
+
+            <video controls>
+                <source src="{{ url_for('static', filename='video/' + video.video_name) }}"
+                        type="video/mp4">
+
+                Your browser does not support video playback.
+            </video>
+
+            <h3>{{ video.event_name }}</h3>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- Image Popup -->
+
+<div id="lightbox">
+
+
+<span id="close">&times;</span>
+
+<button id="prev">&#10094;</button>
+
+<img id="lightbox-img">
+
+<button id="next">&#10095;</button>
+
+
+</div>
+
+<!-- Gallery JavaScript -->
+
+<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+
+</body>
+</html>

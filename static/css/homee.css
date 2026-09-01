@@ -1,0 +1,766 @@
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0b4da2;
+    padding: 10px 30px;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.nav h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* =========================================================
+   MENU HOVER EFFECT
+========================================================= */
+
+.nav ul li a:hover {
+    background: white;
+    color: #0b4da2;
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    height: 450px;
+    background: url("/static/image/school_view.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    background: #0b4da2;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #0b4da2;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+
+    background: #d4caca;
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: 0.4s;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================================
+   CARD HOVER EFFECT
+========================================================= */
+
+.card:hover {
+    transform: translateY(-10px);
+
+    background: #0b4da2;
+    color: white;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+    border: 1px solid black;
+}
+
+
+/* =========================================================
+   FACILITIES
+========================================================= */
+
+.facility {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.facility div {
+    background: #ddd;
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    transition: 0.4s;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FACILITY HOVER EFFECT
+========================================================= */
+
+.facility div:hover {
+    transform: translateY(-10px);
+
+    background: #0b4da2;
+    color: white;
+
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   FOUNDER
+========================================================= */
+
+.founder {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    align-items: center;
+}
+
+.founder img {
+    width: 220px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #0b4ea2;
+
+    transition: 0.4s;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    text-align: center;
+    padding: 40px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE
+   701px - 1024px
+========================================================= */
+
+@media (min-width: 701px) and (max-width: 1024px) {
+
+    /* NAVBAR */
+
+    .nav {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav h2 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .nav ul li a {
+        padding: 12px 8px;
+        font-size: 15px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-text {
+        bottom: 20px;
+        right: 20px;
+
+        max-width: 450px;
+
+        padding: 18px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+
+    /* COMMON SECTION */
+
+    .section {
+        padding: 35px 25px;
+    }
+
+
+    /* CARDS */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+
+    /* FACILITIES */
+
+    .facility {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .facility div {
+        padding: 18px;
+    }
+
+
+    /* FOUNDER */
+
+    .founder {
+        padding: 35px 25px;
+        gap: 25px;
+    }
+
+    .founder img {
+        width: 190px;
+        height: 240px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        padding: 35px 25px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   700px AND BELOW
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 8px 15px;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .nav h2 {
+        flex: 1;
+        font-size: 18px;
+        margin-left: 8px;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-btn {
+        display: block;
+        font-size: 28px;
+        padding: 5px;
+    }
+
+
+    /* MOBILE MENU */
+
+    .nav ul {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        background: #0b4da2;
+
+        margin-top: 8px;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .nav ul li {
+        width: 100%;
+
+        text-align: center;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .nav ul li a {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        height: 200px;
+        background-position:left;
+    }
+
+    .hero-text {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+
+        padding: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        margin-top: 8px;
+    }
+
+
+    /* BUTTON */
+
+    .btn {
+        padding: 9px 18px;
+        margin-top: 15px;
+    }
+
+
+    /* =====================================================
+       COMMON SECTION
+    ===================================================== */
+
+    .section {
+        padding: 30px 15px;
+    }
+
+    .section h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .section p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       CARDS
+    ===================================================== */
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 20px 15px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 21px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       FACILITIES
+    ===================================================== */
+
+    .facility {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .facility div {
+        padding: 18px;
+        font-size: 16px;
+    }
+
+
+    /* =====================================================
+       FOUNDER
+    ===================================================== */
+
+    .founder {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 20px;
+
+        gap: 20px;
+    }
+
+    .founder img {
+        width: 180px;
+        height: 220px;
+    }
+
+    .founder h2 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .founder p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact {
+        padding: 35px 15px;
+    }
+
+    .contact h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .contact p {
+        font-size: 14px;
+
+        margin: 10px 0;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        padding: 20px 15px;
+    }
+
+    footer p {
+        font-size: 13px;
+
+        line-height: 1.6;
+
+        margin: 5px 0;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+
+    .nav {
+        padding: 7px 10px;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nav h2 {
+        font-size: 15px;
+        margin-left: 6px;
+    }
+
+    .menu-btn {
+        font-size: 25px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 220px;
+    }
+
+    .hero-text {
+        left: 30px;
+        right: 30px;
+        bottom: 20px;
+
+        padding: 8px;
+    }
+
+    .hero-text h1 {
+        font-size: 18px;
+        margin-bottom:8px;
+    }
+
+    .hero-text p {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+    .btn {
+        padding: 8px 18px;
+        font-size: 12;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 25px 12px;
+    }
+
+    .section h2 {
+        font-size: 22px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+
+    /* CARDS */
+
+    .cards {
+        padding: 15px 12px;
+    }
+
+    .card {
+        padding: 18px 15px;
+    }
+
+
+    /* FACILITIES */
+
+    .facility div {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+
+    /* FOUNDER */
+
+    .founder {
+        padding: 30px 15px;
+    }
+
+    .founder img {
+        width: 160px;
+        height: 200px;
+    }
+
+    .founder h2 {
+        font-size: 22px;
+    }
+
+    .founder p {
+        font-size: 14px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        padding: 30px 12px;
+    }
+
+    .contact h2 {
+        font-size: 22px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 18px 10px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
