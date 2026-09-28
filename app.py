@@ -6,16 +6,21 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-
-app.secret_key = "blossom-school-secret-key"
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 def get_db_connection():
     return mysql.connector.connect(
         host=os.getenv("DB_HOST"),
+        port=int(os.getenv("DB_PORT", "3306")),
         user=os.getenv("DB_USER"),
         password=os.getenv("DB_PASSWORD"),
-        database=os.getenv("DB_NAME")
+        database=os.getenv("DB_NAME"),
+        ssl_ca=os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            "ca.pem"
+        ),
+        ssl_verify_cert=True,
+        ssl_verify_identity=True
     )
 @app.route("/test-db")
 def test_db():
